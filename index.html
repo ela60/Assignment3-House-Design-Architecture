@@ -26,20 +26,20 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: 'rgb(139, 195, 74)',
-                        secondary: 'rgb(17, 17, 17)',
-                        body: 'rgb(248, 246, 243)',
-                        accent: 'rgb(106, 151, 57)',
-                        body_neutral: 'rgb(51, 51, 51)',
+                        // primary: 'rgb(139, 195, 74)',
+                        // secondary: 'rgb(17, 17, 17)',
+                        // body: 'rgb(248, 246, 243)',
+                        accent: 'rgb(171, 239, 95)',
+                        button:'rgb(171, 239, 95)'
                     },
                     fontFamily: {
                         Manrope: 'Manrope',
                     },
-                    backgroundImage: {
-                        leaf1: "url('./images/leaf01.png')",
-                        call_to_action: "url('./images/call.jpg')",
-                        testimonials: "url('./images/testimonials.jpg')",
-                    },
+                    // backgroundImage: {
+                    //     leaf1: "url('./images/leaf01.png')",
+                    //     call_to_action: "url('./images/call.jpg')",
+                    //     testimonials: "url('./images/testimonials.jpg')",
+                    // },
                 },
             },
         }
@@ -52,9 +52,12 @@
         <!-- nav bar section start -->
         <nav class="navbar w-11/12 mx-auto">
             <div class="navbar-start">
-                <a href="#">
-                    <img class="w-[150px]" src="./images/logo.svg" alt="" />
-                </a>
+                
+                <div class="flex gap-2">
+                    <i class="fa-solid fa-arrow-right -rotate-45 bg-accent border rounded-full w-8 h-8 text-center text-xl"></i>
+
+                    <h2 class="text-2xl font-extrabold font">Rinterio</h2>
+                </div>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 flex items-center gap-5 text-lg font-medium">
@@ -62,26 +65,28 @@
                         <a href="#">Home</a>
                     </li>
                     <li class="hover:text-primary transition-colors ease-in-out duration-300">
-                        <a href="#">Everything</a>
+                        <a href="#">Services</a>
                     </li>
                     <li class="hover:text-primary transition-colors ease-in-out duration-300">
-                        <a href="#">Groceries</a>
+                        <a href="#">Portfolio</a>
                     </li>
                     <li class="hover:text-primary transition-colors ease-in-out duration-300">
-                        <a href="#">About</a>
+                        <a href="#">Blogs</a>
                     </li>
                     <li class="hover:text-primary transition-colors ease-in-out duration-300">
-                        <a href="#">Contact</a>
+                        <a href="#">Contact Us</a>
                     </li>
                 </ul>
             </div>
             <div class="navbar-end gap-5 items-center">
                 <div class="flex gap-5 text-lg">
-                    <button class="flex items-center gap-2 font-semibold text-accent">
-                        <span>$10.00</span>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <button class="bg-accent flex rounded-3xl p-2 px-3">
+                        Book Consult
+                        <i class="fa-solid fa-arrow-right -rotate-45 bg-black border rounded-full w-8 h-8 text-center text-xl text-white "></i>
+                        
                     </button>
-                    <button><i class="fa-solid fa-user"></i></button>
                 </div>
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-primary text-lg">
@@ -93,16 +98,16 @@
                             <a href="#">Home</a>
                         </li>
                         <li class="hover:text-primary transition-colors ease-in-out duration-300">
-                            <a href="#">Everything</a>
+                            <a href="#">Services</a>
                         </li>
                         <li class="hover:text-primary transition-colors ease-in-out duration-300">
-                            <a href="#">Groceries</a>
+                            <a href="#">Portfolio</a>
                         </li>
                         <li class="hover:text-primary transition-colors ease-in-out duration-300">
-                            <a href="#">About</a>
+                            <a href="#">Blogs</a>
                         </li>
                         <li class="hover:text-primary transition-colors ease-in-out duration-300">
-                            <a href="#">Contact</a>
+                            <a href="#">Contact us</a>
                         </li>
                     </ul>
                 </div>
