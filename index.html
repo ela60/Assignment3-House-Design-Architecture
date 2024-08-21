@@ -26,31 +26,30 @@
             theme: {
                 extend: {
                     colors: {
-                        // primary: 'rgb(139, 195, 74)',
-                        // secondary: 'rgb(17, 17, 17)',
-                        // body: 'rgb(248, 246, 243)',
+                        primary: 'rgb(255, 255, 255)',
+                         secondary: 'rgba(255, 255, 255, 0)',
+                        bannerBtn: 'rgba(171, 239, 95, 0.5)',
                         accent: 'rgb(171, 239, 95)',
                         button:'rgb(171, 239, 95)'
                     },
                     fontFamily: {
                         Manrope: 'Manrope',
                     },
-                    // backgroundImage: {
-                    //     leaf1: "url('./images/leaf01.png')",
-                    //     call_to_action: "url('./images/call.jpg')",
-                    //     testimonials: "url('./images/testimonials.jpg')",
-                    // },
+                    button:{
+                        icon:' <i class="fa-solid fa-arrow-right -rotate-45 bg-accent border rounded-full w-8 h-8 text-center text-xl"></i>',
+                    },
+                    
                 },
             },
         }
     </script>
 </head>
 
-<body class="font-Manrope">
+<body class="font-Manrope  ">
     <!-- banner section start -->
-    <header>
+    <header class=" bg-gradient-to-t from-slate-200  to-pink-100">
         <!-- nav bar section start -->
-        <nav class="navbar w-11/12 mx-auto">
+        <nav class="navbar w-11/12 mx-auto ">
             <div class="navbar-start">
                 
                 <div class="flex gap-2">
@@ -59,34 +58,38 @@
                     <h2 class="text-2xl font-extrabold font">Rinterio</h2>
                 </div>
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div class="navbar-center mr-12 hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 flex items-center gap-5 text-lg font-medium">
-                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300 text-black">
                         <a href="#">Home</a>
                     </li>
-                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300 text-gray-400">
                         <a href="#">Services</a>
                     </li>
-                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300 text-gray-400">
                         <a href="#">Portfolio</a>
                     </li>
-                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300 text-gray-400">
                         <a href="#">Blogs</a>
                     </li>
-                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300 text-gray-400">
                         <a href="#">Contact Us</a>
                     </li>
                 </ul>
             </div>
-            <div class="navbar-end gap-5 items-center">
-                <div class="flex gap-5 text-lg">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <button class="bg-accent flex rounded-3xl p-2 px-3">
-                        Book Consult
-                        <i class="fa-solid fa-arrow-right -rotate-45 bg-black border rounded-full w-8 h-8 text-center text-xl text-white "></i>
-                        
-                    </button>
+            <div class="navbar-end  items-center  ">
+                <div class="flex gap-5 text-lg ">
+                    <div class="flex gap-4 items-center mt-1 ">
+                    <i class="fa-solid fa-magnifying-glass bg-white rounded-full w-9 h-9 text-center text-xl "></i>
+                    <i class="fa-solid fa-cart-shopping  bg-white rounded-full w-9 h-9 text-center text-xl"></i>
+                    </div>
+                    <div class="">
+                        <button class="bg-accent flex rounded-3xl w-40 h-10 gap-2 p-1 ">
+                            <h2 > Book Consult</h2>
+                             <i class="fa-solid fa-arrow-right -rotate-45 bg-black  rounded-full w-8 h-8 text-center text-xl text-white "></i>
+                             
+                         </button>
+                    </div>
                 </div>
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-primary text-lg">
@@ -115,30 +118,27 @@
         </nav>
 
         <!-- Banner section start -->
-        <section class="bg-leaf1 bg-no-repeat bg-right-bottom">
-            <div class="h-full w-full bg-body bg-opacity-90">
+        <section class=" bg-no-repeat bg-right-bottom ">
+            <div class="hero min-h-screen  text-center items-center ">
                 <div
-                    class="lg:w-9/12 w-11/12 h-full mx-auto sm:grid grid-cols-2 gap-10 items-center justify-center sm:py-28 py-5">
-                    <div class="">
-                        <img src="./images/bannerbg.png" alt="" />
+                    class=" hero-content text-center sm:grid grid-rows-1 gap-10 items-center justify-center sm:py-28 py-5">
+                    <div class="ml-96">
+                        <img src="assets/banner.png" alt="" />
                     </div>
-                    <div class="sm:text-left text-center">
-                        <img class="sm:block hidden" src="./images/small-leaf.png" alt="" />
-                        <h4 class="sm:text-xl text-lg font-semibold my-5">
-                            Best Quality Products
+                    <div class="sm:text-left ml-40">
+                        
+                        <h4 class="sm:text-4xl text-lg font-extrabold my-5">
+                            A barn house of this design has a striking appearance
                         </h4>
-                        <h1 class="lg:text-6xl text-4xl font-bold leading-tight">
-                            Join The Organic Movement!
-                        </h1>
-                        <p class="lg:w-3/4 text-neutral-500 my-5">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                        
+                        <p class=" text-center lg:w-3/4 text-neutral-500 my-5">
+                            The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.
                         </p>
                         <div class="flex sm:justify-start justify-center pb-10">
                             <button
-                                class="flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                                <span>shop Now</span>
+                                class="flex gap-2 items-center bg-bannerBtn hover:bg-primary px-10 py-4 rounded-full font-semibold text-black transition-colors duration-300 ease-in-out">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-right -rotate-45 bg-accent border rounded-full w-8 h-8 text-center text-xl"></i>
                             </button>
                         </div>
                     </div>
@@ -150,8 +150,43 @@
     <!-- main section start -->
     <main>
         <!-- We design thoughtful -->
-         <section>
-
+         <section class="bg-base-200 ">
+            <div class="hero min-h-screen w-10/12 mx-auto py-20 ">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <img
+                    src="assets/Rectangle.png"
+                    class="max-w-sm rounded-lg shadow-2xl" />
+                  <div>
+                    <div class="mb-3">
+                        <img class="-ml-16" src="assets/Vector.png" alt="">
+                    </div>
+                    <button class="btn bg-white">
+                        <i class="fa-solid fa-arrow-right border rounded-full"></i>
+                        About Us</button>
+                    <h1 class="text-5xl font-bold">We design thoughtful,<br> liveable spaces</h1>
+                    <p class="py-6">
+                        The barn house captivates with its blend of rustic charm and <br>
+                        modern sophistication, featuring weathered wood, sleek metal accents.
+                    </p>
+                    <div class=" w-10/12 ">
+                        <div class="flex gap-2 bg-white p-5  rounded-lg">
+                            <img src="assets/commercial.png" alt="">
+                            <div>
+                            <h3 class="font-semibold text-black">Commercial</h3>
+                            <p class="text-gray">The barn house captivates with its blend <br> of rustic charm and modern.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 bg-white mt-4 p-5  rounded-lg">
+                            <img src="assets/residential.png" alt="">
+                            <div>
+                            <h3 class="font-semibold text-black">Commercial</h3>
+                            <p class="text-gray">The barn house captivates with its blend <br> of rustic charm and modern.</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
          </section>
 
          <!-- Number section -->
