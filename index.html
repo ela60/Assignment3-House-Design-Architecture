@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Architecture design of a House</title>
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- tailwind css & DaisyUI Links -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgb(139, 195, 74)',
+                        secondary: 'rgb(17, 17, 17)',
+                        body: 'rgb(248, 246, 243)',
+                        accent: 'rgb(106, 151, 57)',
+                        body_neutral: 'rgb(51, 51, 51)',
+                    },
+                    fontFamily: {
+                        Manrope: 'Manrope',
+                    },
+                    backgroundImage: {
+                        leaf1: "url('./images/leaf01.png')",
+                        call_to_action: "url('./images/call.jpg')",
+                        testimonials: "url('./images/testimonials.jpg')",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="font-Manrope">
+    <!-- banner section start -->
+    <header>
+        <!-- nav bar section start -->
+        <nav class="navbar w-11/12 mx-auto">
+            <div class="navbar-start">
+                <a href="#">
+                    <img class="w-[150px]" src="./images/logo.svg" alt="" />
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 flex items-center gap-5 text-lg font-medium">
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Everything</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Groceries</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-end gap-5 items-center">
+                <div class="flex gap-5 text-lg">
+                    <button class="flex items-center gap-2 font-semibold text-accent">
+                        <span>$10.00</span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                    <button><i class="fa-solid fa-user"></i></button>
+                </div>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden bg-primary text-lg">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 right-0 p-2 shadow text-lg font-medium gap-5">
+                        <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                            <a href="#">Everything</a>
+                        </li>
+                        <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                            <a href="#">Groceries</a>
+                        </li>
+                        <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="hover:text-primary transition-colors ease-in-out duration-300">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Banner section start -->
+        <section class="bg-leaf1 bg-no-repeat bg-right-bottom">
+            <div class="h-full w-full bg-body bg-opacity-90">
+                <div
+                    class="lg:w-9/12 w-11/12 h-full mx-auto sm:grid grid-cols-2 gap-10 items-center justify-center sm:py-28 py-5">
+                    <div class="">
+                        <img src="./images/bannerbg.png" alt="" />
+                    </div>
+                    <div class="sm:text-left text-center">
+                        <img class="sm:block hidden" src="./images/small-leaf.png" alt="" />
+                        <h4 class="sm:text-xl text-lg font-semibold my-5">
+                            Best Quality Products
+                        </h4>
+                        <h1 class="lg:text-6xl text-4xl font-bold leading-tight">
+                            Join The Organic Movement!
+                        </h1>
+                        <p class="lg:w-3/4 text-neutral-500 my-5">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                        </p>
+                        <div class="flex sm:justify-start justify-center pb-10">
+                            <button
+                                class="flex gap-2 items-center bg-accent hover:bg-primary px-10 py-4 rounded-md font-semibold text-white transition-colors duration-300 ease-in-out">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>shop Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- main section start -->
+    <main>
+        <!-- We design thoughtful -->
+         <section>
+
+         </section>
+
+         <!-- Number section -->
+          <section>
+
+          </section>
+
+          <!-- Our works process -->
+
+          <section>
+
+          </section>
+          <!-- Our latest Portfolio -->
+           <section>
+
+           </section>
+
+           <!-- Read Our Articles & news -->
+            <section>
+
+            </section>
+
+            <!-- Lets Discuss Next Projects -->
+
+            <section>
+
+            </section>
+       
+    </main>
+
+    <footer class="bg-secondary text-white p-10">
+        <div class="footer w-11/12 mx-auto py-10">
+            <aside>
+                <img src="./images/logo-white.png" alt="" />
+                <p>Providing Organic Food since 1992</p>
+            </aside>
+            <nav>
+                <h6 class="footer-title">Services</h6>
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Design</a>
+                <a class="link link-hover">Marketing</a>
+                <a class="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Company</h6>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Jobs</a>
+                <a class="link link-hover">Press kit</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Legal</h6>
+                <a class="link link-hover">Terms of use</a>
+                <a class="link link-hover">Privacy policy</a>
+                <a class="link link-hover">Cookie policy</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
